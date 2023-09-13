@@ -1,0 +1,99 @@
+header {
+    position:fixed; top:0; left:0;
+    z-index:999;
+}
+header nav {
+    width:100vw;
+    padding:5px 20px; background:#7A4495;
+    display:flex; flex-flow:row nowrap; justify-content:flex-end;
+    border-bottom:1px solid #fff;
+}
+header nav a {
+    font-family: 'Montserrat', sans-serif;
+    line-height:50px; color:#fff; font-weight:500;
+    display:block;
+    padding:0 10px; margin:0 20px;
+}
+header nav a:hover {font-weight:600;}
+/* header nav .active {color:#7A4495;} */
+aside {
+    position:fixed; top:200px; left:-130px;
+    z-index:999;
+}
+aside h1 {
+    color: #FFF;
+    font-family: Montserrat; font-size:1.125rem; font-weight:400;
+    letter-spacing:0.43125rem;
+    transform:rotate(90deg);
+}
+#wrap {position:absolute; top:0; left:0;}
+#wrap #home {
+    height:100vh; background:#7A4495;
+}
+#wrap #home .title {
+    display:flex; flex-flow:column nowrap; align-items:center;
+    /* margin-top:-200px; */
+}
+#wrap #home .title .subtitle {
+    width:810px;
+    display:flex; flex-flow:row nowrap; align-items:center;
+}
+#wrap #home .title .subtitle .sub {
+    font-family: 'Montserrat', sans-serif;
+    font-size:1.25rem; font-weight:300;
+    color:#fff;
+}
+#wrap #home .title .subtitle .sub em {
+    font-family: 'Montserrat', sans-serif;
+    font-size:1.25rem; font-weight:500;
+    color:#fff;
+}
+#wrap #home .title .subtitle .line {
+    content:''; width:200px; height:1px;
+    display:inline-block; background:#fff;
+    margin-left:10px;
+}
+#wrap #home .title h1 {
+    font-family: Montagu Slab;
+    font-size:10rem;
+    color:#fff;
+    margin-bottom:30px;
+}
+#wrap #home .title h2 {
+    color: #FFF;
+    font-family: Montserrat; font-size:1.333rem; font-weight:400;
+}
+#wrap #home h2 {
+    font-weight:600; color:#fff;
+}
+#wrap #home .scroll {
+    position:absolute; bottom:5px; left:50%;
+    transform:translate(-50%,-50%);
+    display:flex; flex-flow:column nowrap; align-items:center;
+}
+#wrap #home .scroll p {
+    color:#fff; 
+    margin-bottom:10px;
+}
+#wrap #home .mouse {
+    content:''; display:block;
+    width: 30px; height: 50px; 
+    border:2px solid #fff; border-radius:50px;
+    display:flex; justify-content:center;
+}
+#wrap #home .scroll .wheel {
+    content:''; display:block;
+    width: 4px; height: 12px;
+    border-radius:50px; background:#fff;
+    margin-top:7px;
+    animation:wheel 0.8s alternate infinite;
+}
+/* 마우스휠 애니메이션 */
+@keyframes wheel {
+    0% {transform:translateY(-2px)}
+    100% {transform:translateY(3px)}
+}
+#wrap #about {
+    display:flex; flex-flow:column nowrap; align-items:center;
+}
+#wrap #about {}
