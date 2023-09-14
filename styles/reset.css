@@ -1,5 +1,11 @@
 *{box-sizing:border-box;}
 /*local or web(@import) 글꼴 작성위치*/
+@font-face {
+    font-family: 'ACCchildrenheartOTF-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112-2@1.0/ACCchildrenheartOTF-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 /* reset.css */
 html, body,
 h1, h2, h3, h4, h5, h6, p, blockquote, address,

@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bora's portfolio:)</title>
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <!-- favicon -->
     <!-- <link rel="shortcut icon" href="" type="image/x-icon">
     <link rel="icon" href="" type="image/x-icon"> -->
     <!-- 글꼴 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bevan:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,500&family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -23,6 +26,7 @@
     <!-- <link rel="stylesheet" href="./styles/portfolio_reponsive.css"> -->
 </head>
 <body>
+    <div id="mouse"></div>
     <header>
         <nav>
             <a href="#home" class="active">HOME</a>
@@ -37,6 +41,7 @@
     </aside>
     <div id="wrap">
         <div class="section" id="home">
+            <div class="ani"><img src="./images/txt_ani.png" alt=""></div>
             <div class="title">
                 <div class="subtitle">
                     <p class="sub">Web publisher & Designer <em>Nam bora</em></p>
@@ -54,44 +59,150 @@
         </div>
         <div class="section" id="about">
             <div class="title">
-                <h1>ABOUT ME</h1>
-                <h2>새로운 도전과 학습을 통해 끊임없는 성장과 발전을 추구하는 <em>신입 웹퍼블리셔(디자이너) 남보라</em>입니다. </h2>
+                <h1>ABOUT</h1>
+                <h2><em>새로운 도전과 학습을 통해 끊임없는 성장과 발전을 추구</em>하는<br>
+                    신입 웹퍼블리셔(디자이너) 남보라입니다.</h2>
             </div>
             <div class="box">
-                <div class="img"><img src="" alt=""></div>
+                <div class="img">
+                    <img src="./images/face.png" alt="">
+                    <span>NAM BORA</span>
+                </div>
                 <div class="contents">
+                    <!-- <h2>“끊임없는 성장과 발전하여 회사에 필요한 웹퍼블리셔(디자이너)가 되겠습니다!”</h2> -->
                     <div class="c1">
-                        <h2>PROFILE</h2>
+                        <h3>PROFILE</h3>
                         <div class="info">
-                            <p><em>Name</em><span>남보라 Nam bora</span></p>
                             <p><em>Birth</em><span>1998.06.17</span></p>
-                            <p><em>Phone</em><span>010-3380-6914</span></p>
-                            <p><em>Mail</em><span>nbora0617@nate.com</span></p>
+                            <div class="contact">
+                                <p><em>Phone</em><span>010-3380-6914</span></p>
+                                <p><em>Mail</em><span>nbora0617@nate.com</span></p>
+                            </div>
                         </div>
                     </div>
                     <div class="c2">
-                        <h2>LICENSE</h2>
+                        <h3>LICENSE</h3>
                         <div class="info">
                             <p><em>2023</em><span>웹디자인기능사 필기 예정</span></p>
-                            <p><em>2018</em><span>2종보통운전면허</span></p>
+                            <p><em>2018</em><span>2종 보통운전면허</span></p>
                         </div>
                     </div>
                     <div class="c3">
-                        <h2>EDUCATION</h2>
+                        <h3>EDUCATION</h3>
                         <div class="info">
                             <p><em>2023.10</em><span>그린컴퓨터아카데미 UI/UX 반응형<br>웹디자인&웹퍼블리셔 (디자인&코딩) 양성과정 A 760시간 수료</span></p>
                             <p><em>2021.10</em><span>부평여성새로일하기센터 ‘클라우드 기반 빅데이터 분석’</span></p>
                             <p><em>2021.08</em><span>인천대학교 생명공학전공 </span></p>
                         </div>
                     </div>
+                    <div class="c4">
+                        <h3>KEYWORD</h3>
+                        <div class="info">
+                            <p>#긍정적</p>
+                            <p>#적응력</p>
+                            <p>#성실함</p>
+                            <p>#도전</p>
+                            <p>#자기계발</p>
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </div>
+        <div class="section" id="skill">
+            <div class="box">
+                <div class="c1">
+                    <h2>HTML5 / CSS3</h2>
+                    <div class="desc">
+                        <p>· 유효성 문제없이 HTML 웹접근성을 준수한 코딩 가능</p>
+                        <p>· CSS 이용한 다양한 디자인과 미디어쿼리 활용한 반응형웹 구현</p>
+                        <p>· Javascript와 연동 가능한 디자인 제작 가능</p>
+                    </div>
+                </div>
+                <div class="c2">
+                    <h2>Javascript / Jquery</h2>
+                    <div class="desc">
+                        <p>· 제어문, 함수, 객체, 이벤트 등 숙지 및 활용 가능</p>
+                        <p>· DOM 요소를 선택하고 조작하여 웹페이지의 동적 기능을 구현</p>
+                        <p>· Jquery 플러그인 적용가능 (Swiper, Api, Fullpage 등)</p>
+                    </div>
+                </div>
+                <div class="c3">
+                    <h2>Photoshop / Illstrator /Figma</h2>
+                    <div class="desc">
+                        <p>· 사진 보정, 합성, 상세페이지, SNS디자인 등 다양한 실무 디자인 가능</p>
+                        <p>· 간단한 캐릭터 디자인, 로고 디자인 등  벡터 디자인을 제작 가능</p>
+                        <p>· 와이어프레임, 프로토타입과 등을 활용하여 웹디자인을 기획, 제작</p>
+                    </div>
+                </div>
+                <div class="c4">
+                    <h2>Ect.</h2>
+                    <div class="desc">
+                        <p>· git명령어를 활용한 gitHUB 프로젝트 관리</p>
+                        <p>· php include 명령어를 이용한 공통페이지 관리</p>
+                        <p>· 그누보드, 카카오맵, FTP, plugin 등 다양한 웹 관련 도구를 활용</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="web_redesign">
+            <div class="swiper" id="web">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slide1">
+                        <div class="left"><img src="./images/web1.png" alt=""></div>
+                        <div class="right">
+                            <div class="txt">
+                                <h2>롬앤 rom&nd</h2>
+                                <div class="desc">
+                                    <p><em>TYPE</em><span>반응형 웹사이트</span></p>
+                                    <p><em>PAGE</em><span>Main, Sub * 3 (로그인, 상품목록, 상품 상세페이지)</span></p>
+                                    <p><em>TOOL</em><span>Figma, Photoshop, HTML5, CSS3, Javascript, Jquery, php, gnuboard, git</span></p>
+                                    <div class="contri">
+                                        <p>기여도</p>
+                                        <div class="contents"><span>디자인 100%</span><span>퍼블리싱 100%</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="site">
+                                <a href="#">WEB 보기</a>
+                                <a href="#">FIGMA 보기</a>
+                                <a href="#">기획서 보기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide2">
+                        <div class="left"><img src="./images/web2.png" alt=""></div>
+                        <div class="right">
+                            <div class="txt">
+                                <h2>드롭탑 droptop</h2>
+                                <div class="desc">
+                                    <p><em>TYPE</em><span>반응형 웹사이트</span></p>
+                                    <p><em>PAGE</em><span>Main, Sub * 3 (회사소개, 메뉴목록, 매장찾기)</span></p>
+                                    <p><em>TOOL</em><span>Figma, Photoshop, HTML5, CSS3, Javascript, Jquery, php, gnuboard, git</span></p>
+                                    <div class="contri">
+                                        <p>기여도</p>
+                                        <div class="contents"><span>디자인 100%</span><span>퍼블리싱 100%</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="site">
+                                <a href="#">WEB 보기</a>
+                                <a href="#">FIGMA 보기</a>
+                                <a href="#">기획서 보기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </div>
         <div class="section"></div>
         <div class="section"></div>
     </div>
     <!-- fullpage 플러그인 JS(필수) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
     <script src="./scripts/jquery.fullPage.js"></script>
     <script>
         //.section형제의 부모대상
@@ -99,11 +210,28 @@
             scrollBar:false, //스크롤바 표시 유무 true false
             scrollingSpeed:1000, //스크롤 속도
             navigation:true, //우측의 네비게이션 유무
-            
             // navigationTooltips:['반얀트리 홈','s2','s3','s4'], //네비게이션의 명칭 지정
             // showActiveTooltip:true, //네비게이션 명칭이 보이도록 하는 속성
         })
-        
+
+
+        const web = new Swiper('#web', {
+            loop:true,
+            // autoplay:{delay:3000}, //자동재생
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        })
+
+        //마우스
+        const mouse = document.querySelector('#mouse')
+        console.log(mouse)
+        window.addEventListener('mousemove',function(e){
+            // console.log(e)
+            mouse.style.left = `${e.clientX}px`
+            mouse.style.top = `${e.clientY}px`
+        })
     </script>
 </body>
 </html>
