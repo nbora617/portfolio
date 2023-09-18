@@ -55,8 +55,9 @@ aside h1 {
     letter-spacing:0.43125rem;
     transform:rotate(90deg);
 }
-#wrap {position:absolute; top:0; left:0;}
+#wrap {width:100%;}
 #wrap #home {
+    display:flex; flex-flow:column nowrap; justify-content:center;
     height:100vh; background:#603F83;
 }
 #wrap #home .ani {
@@ -230,29 +231,49 @@ aside h1 {
 }
 #wrap #about .box .skill .s_wrap img {margin-right:20px;}
 /* 웹리디자인 */
-#wrap #web_redesign {}
+#wrap #web_redesign {/* position:relative; */ height:100vh;}
+#wrap #web_redesign h1 {
+    color:transparent; -webkit-text-stroke: 2px #603F83;
+    font-size:8rem; font-weight:600;
+    display:flex; align-items:center; margin-left:100px;
+    transition:all 0.7s;
+}
+#wrap #web_redesign h1:hover {
+    -webkit-text-stroke:none;
+    color:#603F83;
+}
+#wrap #web_redesign h1::before {
+    content:''; display:inline-block;
+    width:100px; height:100px; border-radius:50px;
+    background:rgba(96, 63, 131, 0.3);
+    margin-right:-50px; margin-top:-50px; 
+}
 #wrap #web_redesign #web {
     /* background:rgba(255, 255, 255, 0.5); */
     max-width:1440px; margin:0 auto;
 }
-#wrap #web_redesign #web .swiper-pagination-bullet {background-color:#000;}
+#wrap #web_redesign #web .swiper-pagination-bullet {background-color:#603F83;}
 #wrap #web_redesign #web .swiper-button-prev {}
 #wrap #web_redesign #web .swiper-button-next {}
-.swiper-button-prev:after, .swiper-button-next:after {color:black;}
+.swiper-button-prev:after, .swiper-button-next:after {color:#603F83;}
 #wrap #web_redesign #web .swiper-wrapper {width:1200px; margin:0 auto;}
 #wrap #web_redesign #web .swiper-wrapper .swiper-slide {
     display:flex; flex-flow:row nowrap; align-items:flex-end;
     padding:100px 0;
 }
 #wrap #web_redesign #web .swiper-wrapper .swiper-slide .left {
-    padding:0 20px;
-    max-width:800px; height:450px;
-    border-radius:30px;
-    margin-right:50px; overflow-y:auto;
+    padding:10px; 
+    max-width:800px; height:450px; 
+    border-radius:30px; 
+    margin-right:50px;
     box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
-
-#wrap #web_redesign #web .swiper-wrapper .swiper-slide .left img {width:100%;}
+#wrap #web_redesign #web .swiper-wrapper .swiper-slide .left .box {
+    height:100%; overflow-y:auto;
+}
+#wrap #web_redesign #web .swiper-wrapper .swiper-slide .left img {
+    width:100%; 
+}
 #wrap #web_redesign #web .swiper-wrapper .swiper-slide .left img:hover {}
 #wrap #web_redesign #web .swiper-wrapper .swiper-slide .right {width:500px;}
 #wrap #web_redesign #web .swiper-wrapper .swiper-slide .right .txt {margin-bottom:30px;}
@@ -309,37 +330,191 @@ aside h1 {
     width:120px; padding:10px 0; margin-right:10px;
     font-family: Montserrat; font-size:0.875rem; 
     text-align:center;
-    border:1px solid #000; border-radius:10px;;
+    color:#603F83; border:1px solid #603F83; border-radius:10px;;
+    transform:scale(1); transition:all 0.5s linear;
 }
-/* 롬앤 */
-/* #wrap #web_redesign #web .swiper-wrapper .slide1 .right .txt h2 {
-    color:#FACDD2;
-} */
-#wrap #web_redesign #web .swiper-wrapper .slide1 .right .site a {
-    border-color:#FACDD2; color:#FACDD2;
-    transform:scale(1);
-    transition:all 0.5s linear;
-}
-#wrap #web_redesign #web .swiper-wrapper .slide1 .right .site a:hover {
-    background:#FACDD2;; color:#fff; border:none;
+#wrap #web_redesign #web .swiper-wrapper .swiper-slide .right .site a:hover {
+    background: #603F83; color:#fff; border:none;
     transform:scale(1.1);
 }
-/* 드롭탑 */
-/* #wrap #web_redesign #web .swiper-wrapper .slide2 .right .txt h2 {
-    color:#171C8F;
-} */
-#wrap #web_redesign #web .swiper-wrapper .slide2 .right .site a {
-    border-color:#171C8F; color:#171C8F;
+/* 프로젝트 */
+#wrap #project_design {height:100vh; width:100%; position:relative; }
+#wrap #project_design h1 {
+    color:transparent; -webkit-text-stroke: 2px #603F83;
+    font-size:8rem; font-weight:600;
+    display:flex; align-items:center; margin-left:100px;
+}
+#wrap #project_design h1::before {
+    content:''; display:inline-block;
+    width:100px; height:10px; background:#603F83;
+}
+#wrap #project_design #project {max-width:1440px; margin:0 auto;}
+#wrap #project_design #project .swiper-wrapper {
+    padding:100px 0;
+    width:1000px; margin:0 auto;
+    display:flex; justify-content:center;
+}
+#wrap #project_design #project .swiper-wrapper .swiper-slide {
+    width:300px;; height:400px; overflow:hidden;
+    margin-right:100px; border-radius:10px;
+    box-shadow: 0 0 10px rgba(104,104,104,.5);
+}
+#wrap #project_design #project .swiper-wrapper .swiper-slide:last-child {margin-right:0;}
+#wrap #project_design #project .swiper-wrapper .swiper-slide img {
+    width:100%;
     transform:scale(1);
-    transition:all 0.5s linear;
+    filter:grayscale(100%); transition:all 0.5s linear;
 }
-#wrap #web_redesign #web .swiper-wrapper .slide2 .right .site a:hover {
-    background:#171C8F; color:#fff; border:none;
-    transform:scale(1.1);
+#wrap #project_design #project .swiper-wrapper .swiper-slide:hover img {
+    filter:none; transform:scale(1.1);
 }
-#wrap #detail_design {}
-#wrap #detail_design .swiper-wrapper {}
-#wrap #detail_design .swiper-wrapper .swiper-slide {
-    width:150; height:300px; background:#f1f1f1;
-    margin-right:20px;
+#wrap #project_design .browser_on  {
+    display:none;
+    width:60%; height:800px;
+    z-index:9999;
+    position:absolute; top:50%; left:50%;
+    transform:translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(104,104,104,.5);
+    
+}
+#wrap #project_design .browser_on > img {width:100%; height:100%;}
+#wrap #project_design .browser_on .gnb {
+    position:absolute; top:13px; left:100px;
+    display:flex; 
+}
+#wrap #project_design .browser_on ul li {
+    display:flex; align-items:center; justify-content:center;
+    padding:7px 10px; border-radius:8px 8px 0 0;
+    position:relative;
+}
+#wrap #project_design .browser_on ul li a {font-size:0.875rem;}
+#wrap #project_design .browser_on ul .on {
+    background:#fff;
+}
+#wrap #project_design #project .browser_on ul li::after {
+    content:''; display:inline-block;
+    width:1px; height:70%; background:#aaa;
+    position:absolute; top:50%; right:0;
+    transform:translateY(-50%);
+}
+#wrap #project_design .browser_on ul li:last-child::after {display:none;}
+#wrap #project_design .browser_on #close {
+    position:absolute; right:10px; top:8px;
+    width:15px; height:15px; 
+    transform:scale(1); transition:all 0.5s;
+    background:none;
+}
+#wrap #project_design .browser_on #close:hover {transform:scale(1.5);}
+#wrap #project_design .browser_on #close img {width:100%;}
+#wrap #project_design .browser_on p {
+    position:absolute; top:50px; left:100px;
+    font-size:0.75rem;
+}
+#wrap #project_design .browser_on #detail_mac {
+    width:100%; height:85%;
+    position:absolute; top:100px; left:50%;
+    transform:translateX(-50%);
+    overflow-y:auto;
+}
+#wrap #project_design .browser_on #detail_mac .swiper-wrapper {}
+#wrap #project_design .browser_on #detail_mac .swiper-wrapper .swiper-slide {}
+#wrap #project_design .browser_on #detail_mac .swiper-wrapper .swiper-slide img {width:100%;}
+/* 상세페이지 디자인 */
+#wrap #detail_design {height:100vh; width:100%; position:relative; }
+#wrap #detail_design h1 {
+    color:transparent; -webkit-text-stroke: 2px #603F83;
+    font-size:8rem; font-weight:600; /* z-index:10; */
+    display:flex; align-items:center; margin-left:100px;
+    transition:all 0.7s;
+}
+#wrap #detail_design h1:hover {
+    -webkit-text-stroke:none;
+    color:#603F83;
+}
+#wrap #detail_design h1::before {
+    content:''; display:inline-block;
+    width:100px; height:100px; border-radius:50px;
+    background:rgba(96, 63, 131, 0.3);
+    margin-right:-50px; margin-top:-50px; 
+}
+#wrap #detail_design #detail {max-width:1440px; margin:0 auto;}
+#wrap #detail_design #detail .swiper-wrapper {
+    padding:100px 0;
+    width:1000px; margin:0 auto;
+    display:flex; justify-content:center;
+}
+#wrap #detail_design #detail .swiper-wrapper .swiper-slide {
+    width:300px;; height:400px; overflow:hidden;
+    margin-right:100px; border-radius:10px;
+    box-shadow: 0 0 10px rgba(104,104,104,.5);
+}
+#wrap #detail_design #detail .swiper-wrapper .swiper-slide:last-child {margin-right:0;}
+#wrap #detail_design #detail .swiper-wrapper .swiper-slide img {
+    width:100%;
+    transform:scale(1);
+    filter:grayscale(100%); transition:all 0.5s linear;
+}
+#wrap #detail_design #detail .swiper-wrapper .swiper-slide:hover img {
+    filter:none; transform:scale(1.1);
+}
+#wrap #detail_design .browser_on  {
+    display:none;
+    width:70%; height:800px;
+    z-index:9999;
+    position:absolute; top:50%; left:50%;
+    transform:translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(104,104,104,.5);
+    
+}
+#wrap #detail_design .browser_on > img {width:100%; height:100%;}
+#wrap #detail_design .browser_on .gnb {
+    position:absolute; top:13px; left:100px;
+    display:flex; 
+}
+#wrap #detail_design .browser_on ul li {
+    display:flex; align-items:center; justify-content:center;
+    padding:7px 10px; border-radius:8px 8px 0 0;
+    position:relative;
+}
+#wrap #detail_design .browser_on ul li a {font-size:0.875rem;}
+#wrap #detail_design .browser_on ul .on {
+    background:#fff;
+}
+#wrap #detail_design .browser_on ul li::after {
+    content:''; display:inline-block;
+    width:1px; height:70%; background:#aaa;
+    position:absolute; top:50%; right:0;
+    transform:translateY(-50%);
+}
+#wrap #detail_design .browser_on ul li:last-child::after {display:none;}
+#wrap #detail_design .browser_on #close {
+    position:absolute; right:10px; top:8px;
+    width:15px; height:15px; 
+    transform:scale(1); transition:all 0.5s;
+    background:none;
+}
+#wrap #detail_design .browser_on #close:hover {transform:scale(1.5);}
+#wrap #detail_design .browser_on #close img {width:100%;}
+#wrap #detail_design .browser_on p {
+    position:absolute; top:50px; left:100px;
+    font-size:0.75rem;
+}
+#wrap #detail_design .browser_on #detail_mac {
+    width:100%; height:85%;
+    position:absolute; top:100px; left:50%;
+    transform:translateX(-50%);
+    overflow-y:auto;
+}
+#wrap #detail_design .browser_on #detail_mac .swiper-wrapper {}
+#wrap #detail_design .browser_on #detail_mac .swiper-wrapper .swiper-slide {}
+#wrap #detail_design .browser_on #detail_mac .swiper-wrapper .swiper-slide img {width:100%;}
+/* 그래픽 디자인 */
+#wrap #graphic_design h1 {
+    color:transparent; -webkit-text-stroke: 2px #603F83;
+    font-size:8rem; font-weight:600;
+    display:flex; align-items:center; margin-left:100px;
+}
+#wrap #graphic_design h1::before {
+    content:''; display:inline-block;
+    width:100px; height:10px; background:#603F83;
 }
