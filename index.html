@@ -225,12 +225,9 @@
         </div>
         <div class="section" id="graphic_design">
             <h1>GRAPHIC DESIGN</h1>
-            <div class="swiper" id="graphic">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide slide1"></div>
-                    <div class="swiper-slide slide2"></div>
-                    <div class="swiper-slide slide3"></div>
-                </div>
+            <div class="box">
+                <div class="left"></div>
+                <div class="right"></div>
             </div>
         </div>
     </div>
@@ -248,14 +245,14 @@
             mouse.style.left = `${e.clientX}px`
             mouse.style.top = `${e.clientY}px`
         })
-        //.section형제의 부모대상
-        // $('#wrap').fullpage({
-        //     scrollBar:false, //스크롤바 표시 유무 true false
-        //     scrollingSpeed:1000, //스크롤 속도
-        //     navigation:true, //우측의 네비게이션 유무
-        //     navigationTooltips:['HOME','ABOUT','WEB REDESIGN','DETAIL', 'BANNER', 'SNS'], //네비게이션의 명칭 지정
-        //     showActiveTooltip:true, //네비게이션 명칭이 보이도록 하는 속성
-        // })
+        // .section형제의 부모대상
+        $('#wrap').fullpage({
+            scrollBar:false, //스크롤바 표시 유무 true false
+            scrollingSpeed:1000, //스크롤 속도
+            navigation:true, //우측의 네비게이션 유무
+            navigationTooltips:['HOME','ABOUT','WEB REDESIGN','DETAIL', 'BANNER', 'SNS'], //네비게이션의 명칭 지정
+            showActiveTooltip:true, //네비게이션 명칭이 보이도록 하는 속성
+        })
         // 웹리디자인 슬라이드
         const web = new Swiper('#web', {
             loop:true,
