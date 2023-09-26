@@ -538,10 +538,14 @@ aside h1 {
     margin-left:100px; margin-right:100px;
 }
 #wrap #sns_banner > div > div {
-    display:flex;
+    display:flex; justify-content:space-between;
     /* max-width:1440px; margin:0 auto; */
     padding:50px 0;
 } 
+#wrap #sns_banner > div .swiper .swiper-wrapper {
+    display:flex; flex-flow:row wrap;
+    width:1200px; row-gap:30px;
+}
 #wrap #sns_banner .sns_design #sns .swiper-wrapper .swiper-slide  {
     position:relative;
     width:220px; height:220px; overflow:hidden;
